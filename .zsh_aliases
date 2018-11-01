@@ -1,0 +1,31 @@
+alias aliases="vim ~/.zsh_aliases"
+alias profile="vim ~/.zsh_profile"
+alias zshconfig="vim ~/.zshrc"
+
+# Unix
+alias c="clear"
+
+# GIT Stuff
+alias gcl='git clone'
+alias gs='git status'
+alias gc='git commit -m'
+alias gca='git commit -am'
+alias ga='git add'
+alias gaa='git add .'
+
+# Laravel
+alias art="php artisan"
+
+# EXTRACTING Stuff
+alias tgz='tar -cvvzf'
+alias tbz2='tar -cvvjf'
+alias utgz='tar -xvvzf'
+alias utbz2='tar -xvvjf'
+alias mktar='tar -cvvf'
+alias untar='tar -xvvf'
+
+# LS Stuff
+alias ls='gls -F -1 --color=auto --group-directories-first'
+alias ll='ls -la'
+alias ld='ls -d */'
+alias la='ls -CA'
