@@ -1,10 +1,10 @@
 # Setup-a-Mac-Dev-Machine-From-Scratch
 
-##Apps
+## Apps
 PHPStorm | Sublime text 3 | Alfred | MysqlWorkbench
-###Alfred
-[Install](https://www.alfredapp.com/)
 
+### Alfred
+[Install](https://www.alfredapp.com/)
 
 ## Homebrew
 [Install](https://brew.sh/)
@@ -42,14 +42,14 @@ touch ~/.zsh_profile
 [zsh aliases](https://github.com/Kenariosz/Setup-a-Mac-Dev-Machine-From-Scratch/blob/master/.zsh_aliases) |
 [zsh_profile](https://github.com/Kenariosz/Setup-a-Mac-Dev-Machine-From-Scratch/blob/master/.zsh_profile)
 
-#Node, NPM and Yarn
+# Node, NPM and Yarn
 [Install](https://nodejs.org/en/)
 
 ```
 sudo npm install -g yarn
 ```
 
-#PHP and MariaDB
+# PHP and MariaDB
 ```
 brew search php7
 brew install #php#
@@ -57,7 +57,7 @@ brew install #php#
 brew install mysql/mariadb
 ```
 
-##Composer
+## Composer
 [Install](https://getcomposer.org/download/)
 ```
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
