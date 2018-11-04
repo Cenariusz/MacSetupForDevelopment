@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/kenariosz/.oh-my-zsh
@@ -100,8 +100,6 @@ fi
 if [ -f ~/.zsh_profile ]; then
     source ~/.zsh_profile
 fi
-
-PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
