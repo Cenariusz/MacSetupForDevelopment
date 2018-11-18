@@ -101,6 +101,8 @@ if [ -f ~/.zsh_profile ]; then
     source ~/.zsh_profile
 fi
 
+PATH="$HOME/.composer/vendor/bin:$PATH"
+
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship

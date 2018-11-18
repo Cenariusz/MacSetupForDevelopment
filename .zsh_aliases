@@ -2,16 +2,23 @@ alias aliases='vim ~/.zsh_aliases'
 alias profile='vim ~/.zsh_profile'
 alias zshconfig='vim ~/.zshrc'
 
+# CDs
+alias work='cd ~/Work'
+
 # Unix
 alias c='clear'
 
 # GIT Stuff
+alias gcoun='git config user.name'
+alias gcoue='git config user.email'
 alias gcl='git clone'
+alias gclb='git clone --single-branch -b'
 alias gs='git status'
 alias gc='git commit -m'
 alias gca='git commit -am'
 alias ga='git add'
 alias gaa='git add .'
+alias gl='git log'
 
 # Laravel
 alias art='php artisan'
