@@ -1,10 +1,10 @@
 # Setup-a-Mac-Dev-Machine-From-Scratch
 
 ## SH script
-Download and run [this](https://github.com/Kenariosz/Setup-a-Mac-Dev-Machine-From-Scratch/blob/master/.zshrc) script, which is install every necessary apps, libraries and tools for development.
+Download and run [this](https://github.com/Kenariosz/Setup-a-Mac-Dev-Machine-From-Scratch/blob/master/setupMacDevMachineFromScratch.command) script, which is install every necessary apps, libraries and tools for development.
 
-chmod +x setupMacDevMachineFromScratch.sh  
-sudo ./setupMacDevMachineFromScratch.sh
+chmod +x setupMacDevMachineFromScratch.command  
+./setupMacDevMachineFromScratch.command
 
 ## Configuration
 ### iTerm
