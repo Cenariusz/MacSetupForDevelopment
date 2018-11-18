@@ -13,8 +13,8 @@ sudo ./setupMacDevMachineFromScratch.sh
 * setup the show/hide ITerm2 with hotkey (Keys tab)
 * reuse previous session's directory (Pref/Profile/General)
 
-##Laravel-Valet
-###Uninstall
+## Laravel-Valet
+### Uninstall
 ```
 valet uninstall
 sudo brew services stop nginx
