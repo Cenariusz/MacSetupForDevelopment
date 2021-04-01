@@ -30,8 +30,8 @@ port install git-flow-avh
 # Alfred
 brew cask install alfred
 
-# PHP 7.2
-brew install php@7.2
+# PHP 7.4
+brew install php@7.4
 php -v
 
 # Composer
