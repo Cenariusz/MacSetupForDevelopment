@@ -23,6 +23,10 @@ brew update
 brew install git
 git --version
 
+# Git flow
+brew install git-flow-avh
+port install git-flow-avh
+
 # Alfred
 brew cask install alfred
 
@@ -54,7 +58,7 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/sub
 # mkdir -p /data/db
 
 # MySQLWorkBench - SQL client
-brew cask install mysqlworkbench
+# brew cask install mysqlworkbench
 
 # Robomongo (Robo 3T) - mongodb client
 brew cask install robo-3t
@@ -109,4 +113,4 @@ brew cask install postman
 brew cask install slack
 
 # ImageOptim - Image optimizer
-#brew cask install ImageOptim
+brew cask install ImageOptim
