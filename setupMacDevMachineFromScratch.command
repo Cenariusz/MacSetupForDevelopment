@@ -54,8 +54,10 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/sub
 #mariadb --version
 
 # MongoDB
-brew install mongodb
-mkdir -p /data/db
+# brew tap mongodb/brew
+# brew install mongodb-community
+# brew services start mongodb-community
+# mkdir -p /data/db
 
 # MySQLWorkBench - SQL client
 # brew install --cask mysqlworkbench
