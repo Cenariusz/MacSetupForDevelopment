@@ -25,7 +25,7 @@ git --version
 
 # Git flow
 brew install git-flow-avh
-port install git-flow-avh
+sudo port install git-flow-avh
 
 # Alfred
 brew install --cask alfred
