@@ -28,7 +28,7 @@ brew install git-flow-avh
 port install git-flow-avh
 
 # Alfred
-brew cask install alfred
+brew install --cask alfred
 
 # PHP 7.4
 brew install php@7.4
@@ -43,10 +43,10 @@ mv ~/Desktop/composer.phar /usr/local/bin/composer
 composer --version
 
 # PHP Storm
-brew cask install phpstorm
+brew install --cask phpstorm
 
 # Sublime Text 3
-brew cask install sublime-text
+brew install --cask sublime-text
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 # MariaDb
@@ -58,13 +58,13 @@ brew install mongodb
 mkdir -p /data/db
 
 # MySQLWorkBench - SQL client
-# brew cask install mysqlworkbench
+# brew install --cask mysqlworkbench
 
 # Robomongo (Robo 3T) - mongodb client
-brew cask install robo-3t
+brew install --cask robo-3t
 
 # Docker
-brew cask install docker
+brew install --cask docker
 
 # Install Node.js, print the version
 brew install node
@@ -78,7 +78,7 @@ npm install -g yarn
 yarn -v
 
 # iTerm2 - best terminal
-brew cask install iterm2
+brew install --cask iterm2
 
 # Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -101,19 +101,19 @@ sudo wget https://raw.githubusercontent.com/Kenariosz/Setup-a-Mac-Dev-Machine-Fr
 sudo wget https://raw.githubusercontent.com/Kenariosz/Setup-a-Mac-Dev-Machine-From-Scratch/master/.zsh_profile -O ~/.zsh_profile
 
 # Chrome
-brew cask install google-chrome
+brew install --cask google-chrome
 
 # Firefox
-#brew cask install firefox
+#brew install --cask firefox
 
 # Postman - api testing
-brew cask install postman
+brew install --cask postman
 
 # Slack
-brew cask install slack
+brew install --cask slack
 
 # ImageOptim - Image optimizer
-brew cask install ImageOptim
+brew install --cask ImageOptim
 
 # Drovio - Remote pair programming and team collaboration tool
 brew install --cask drovio
