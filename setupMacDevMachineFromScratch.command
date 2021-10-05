@@ -54,8 +54,8 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/sub
 #mariadb --version
 
 # MongoDB
-# brew install mongodb
-# mkdir -p /data/db
+brew install mongodb
+mkdir -p /data/db
 
 # MySQLWorkBench - SQL client
 # brew cask install mysqlworkbench
@@ -114,3 +114,6 @@ brew cask install slack
 
 # ImageOptim - Image optimizer
 brew cask install ImageOptim
+
+# Drovio - Remote pair programming and team collaboration tool
+brew install --cask drovio
