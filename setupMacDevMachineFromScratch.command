@@ -119,3 +119,6 @@ brew install --cask ImageOptim
 
 # Drovio - Remote pair programming and team collaboration tool
 brew install --cask drovio
+
+# 1Password - Password manager that keeps all passwords secure behind one password
+brew install --cask 1password
