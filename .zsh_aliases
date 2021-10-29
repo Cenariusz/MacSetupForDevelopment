@@ -4,36 +4,45 @@ alias zshconfig='vim ~/.zshrc'
 
 # CDs
 alias work='cd ~/Work'
+alias api='cd ~/Work/XXX'
+alias ui='cd ~/Work/YYY'
 
 # Unix
 alias c='clear'
 
 # GIT Stuff
-alias gcoun='git config user.name'
-alias gcoue='git config user.email'
-alias gcl='git clone'
-alias gclb='git clone --single-branch -b'
+##Config
+alias gco='git config'
+alias gcn='gco user.name'
+alias gce='gco user.email'
+alias gckd='gco user.name "XXX" && git config user.email "xxx"'
+alias gcken='gco user.name "YYY" && git config user.email "yyy"'
+alias gcsh='git config user.name "ZZZ" && git config user.email "zzz"'
+##General
 alias gs='git status'
+alias gl='git log'
+alias gcl='git clone'
+alias gclb='gcl --single-branch -b'
+alias gaa='git add .'
 alias gc='git commit -m'
 alias gca='git commit -am'
-alias ga='git add'
-alias gaa='git add .'
-alias gl='git log'
-
-# Laravel
-alias art='php artisan'
-alias artkg='art key:generate'
-
-# EXTRACTING Stuff
-alias tgz='tar -cvvzf'
-alias tbz2='tar -cvvjf'
-alias utgz='tar -xvvzf'
-alias utbz2='tar -xvvjf'
-alias mktar='tar -cvvf'
-alias untar='tar -xvvf'
 
 # LS Stuff
 alias ls='gls -F -1 --color=auto --group-directories-first'
 alias ll='ls -la'
 alias ld='ls -d */'
 alias la='ls -CA'
+
+# Symfony
+alias fcc='time rm -R var/cache/* && bin/console cache:warmup'
+alias fixt='bin/console doctrine:mongodb:schema:update && bin/console doctrine:mongodb:fixtures:load -n'
+alias cont='bin/console config:serializer:regenerate'
+
+#Make
+alias muu='make up'
+alias mbb='make bash'
+alias mdd='make down'
+alias mtl='make tail-log'
+
+#Yarn
+alias ys='yarn start'
