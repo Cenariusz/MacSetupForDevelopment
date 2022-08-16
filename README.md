@@ -63,30 +63,45 @@
   * Remove Garage Band & Sound Library
   * Remove iMovie
 
-
+## ITERM2
+* Make iterm2 Default Term
+* Preferences
+	* General
+		* Window
+			* unselect "Native full screen windows"
+	* Appearance
+  	* Windows
+   		* select "Hide scrollbars"
+  	* Tabs
+   		* unselect "Show tab bar in fullscreen"
+  	* Dimming
+   		* Unselect all dimming
+	* Profiles 
+		* General
+  		* select "Advanced Configuration" then click Edit...
+ 		* Window
+  		* Transparency: 30
+  		* Style: Full Screen
+  		* Screen: Main Screen
+ 		* Terminal
+  		* select "Unlimited scrollback"
+ 		* Keys
+  		* select "A hotkey opens a dedicated window with this profile"
+  		* switch to Key Mappings
+   			* Press Presets... dropdown button.
+   			* Select Natural Text Editing
+				* then, you can 
+					* move a word backwards Option ⌥ + ←
+					* move a word forwards Option ⌥ + →
+					* move to the start of the line fn + ←
+					* move to the end of the line fn + →
+					* delete a word backwards Option ⌥ + ⌫
+					* delete the whole line Command ⌘ + ⌫
+		* Advanced
+			* Semantic History -> Open with editor ... -> IntelliJ IDEA
+  
 ## SH script
 Download and run [this](https://github.com/Kenariosz/Setup-a-Mac-Dev-Machine-From-Scratch/blob/master/setupMacDevMachineFromScratch.command) script, which is install every necessary apps, libraries and tools for development.
 
 chmod +x setupMacDevMachineFromScratch.command  
 ./setupMacDevMachineFromScratch.command
-
-## Configuration
-### iTerm
-**Open preferences**
-* turn off native full screen window (General tab)
-* setup the show/hide ITerm2 with hotkey (Keys tab)
-* reuse previous session's directory (Pref/Profile/General)
-
-## Laravel-Valet
-### Uninstall
-```
-valet uninstall
-sudo brew services stop nginx
-sudo brew services stop php70
-sudo brew services stop dnsmasq
-brew uninstall nginx
-brew uninstall php70
-brew uninstall dnsmasq
-rm -rf ~/.valet
-rm /usr/local/bin/valet
-```
