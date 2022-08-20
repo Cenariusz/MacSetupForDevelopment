@@ -227,3 +227,33 @@ source $ZSH/oh-my-zsh.sh
 # use starship theme (needs to be at the end)
 eval "$(starship init zsh)"
 ```
+
+## GIT
+From terminal, set global name and email:
+```
+git config --global user.name "Your Name"
+git config --global user.email "you@your-domain.com"
+```
+
+## SSH
+First, create a new SSH key in the ~/.ssh folder:
+```
+# in case the folder is not there yet
+mkdir ~/.ssh
+
+cd ~/.ssh
+
+ssh-keygen -t ed25519 -C "github"
+# follow instructions
+# use file name: github
+# use passphrase and store it somewhere secure
+```
+Add SSH key to MacOS' keychain:
+```
+ssh-add --apple-use-keychain ~/.ssh/github
+```
+Add the public key to your GitHub settings via the website or via the GitHub CLI (via brew install gh):
+```
+# copy public key and add it to https://github.com/
+cat ~/.ssh/id_rsa.pub | pbcopy
+```

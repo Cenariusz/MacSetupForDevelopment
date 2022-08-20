@@ -98,6 +98,11 @@ if [ ! -f "$SSH_CONFIG_FILE" ]; then
 	touch $SSH_CONFIG_FILE
 fi
 
+printf '\n\e[35m Git global setup... \e[0m\n'
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+git config --global init.defaultBranch main
+git config --list
+
 printf "\n\e[35m Append SSH config file with demo setup... \e[0m\n"
 printf '\n' >>$SSH_CONFIG_FILE
 echo "#Host *" >>$SSH_CONFIG_FILE
