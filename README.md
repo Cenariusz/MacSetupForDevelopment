@@ -113,7 +113,7 @@ chmod +x install.command
 * docker
 * postman
 
-## BUILT-IN MACOS APPLICATIONS
+## BUILT-IN MACOS APPLICATIONSxz
 
 * iMessage
     * sync iCloud for iMessages just for the sake of syncing, then disable iCloud again
@@ -121,6 +121,9 @@ chmod +x install.command
     * iPhone: activate message forwarding to new Mac
 
 ## TERMINAL APPLICATIONS
+
+* git
+    * [multiple git account setup](https://docs.gitlab.com/ee/user/ssh.html)
 
 ## ITERM2
 
@@ -224,7 +227,3 @@ source $ZSH/oh-my-zsh.sh
 # use starship theme (needs to be at the end)
 eval "$(starship init zsh)"
 ```
-
-## GIT
-
-## PHPStorm

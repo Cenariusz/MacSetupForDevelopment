@@ -1,5 +1,5 @@
-#MAC OS
-##Common shortcuts
+# MAC OS
+## Common shortcuts
 **Show/Hide hidden files**
 ```
 CMD + SHIFT + .
