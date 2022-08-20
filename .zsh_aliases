@@ -1,48 +1,26 @@
-alias aliases='vim ~/.zsh_aliases'
+# get machine's ip address
+alias ip="ipconfig getifaddr en0"
+
+# edit global zsh configuration
+alias zshconfig="vim ~/.zshrc"
+# edit global zsh_profile configuration
 alias profile='vim ~/.zsh_profile'
-alias zshconfig='vim ~/.zshrc'
+# edit global zsh_aliases configuration
+alias zalias='vim ~/.zsh_aliases'
+
+# reload zsh configuration
+alias zshsource="source ~/.zshrc"
+# reload zsh configuration
+alias ohmyzsh="cd ~/.oh-my-zsh"
 
 # CDs
 alias work='cd ~/Work'
-alias api='cd ~/Work/XXX'
-alias ui='cd ~/Work/YYY'
 
 # Unix
 alias c='clear'
-
-# GIT Stuff
-##Config
-alias gco='git config'
-alias gcn='gco user.name'
-alias gce='gco user.email'
-alias gckd='gco user.name "XXX" && git config user.email "xxx"'
-alias gcken='gco user.name "YYY" && git config user.email "yyy"'
-alias gcsh='git config user.name "ZZZ" && git config user.email "zzz"'
-##General
-alias gs='git status'
-alias gl='git log'
-alias gcl='git clone'
-alias gclb='gcl --single-branch -b'
-alias gaa='git add .'
-alias gc='git commit -m'
-alias gca='git commit -am'
 
 # LS Stuff
 alias ls='gls -F -1 --color=auto --group-directories-first'
 alias ll='ls -la'
 alias ld='ls -d */'
 alias la='ls -CA'
-
-# Symfony
-alias fcc='time rm -R var/cache/* && bin/console cache:warmup'
-alias fixt='bin/console doctrine:mongodb:schema:update && bin/console doctrine:mongodb:fixtures:load -n'
-alias cont='bin/console config:serializer:regenerate'
-
-#Make
-alias muu='make up'
-alias mbb='make bash'
-alias mdd='make down'
-alias mtl='make tail-log'
-
-#Yarn
-alias ys='yarn start'
