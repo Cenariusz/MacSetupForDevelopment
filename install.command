@@ -82,6 +82,7 @@ brew install \
   exa \
   git \
   git-flow-avh \
+  gh \
   composer \
   node \
   yarn \
