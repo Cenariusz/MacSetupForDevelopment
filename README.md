@@ -110,6 +110,7 @@ chmod +x install.command
 * jetbrains-toolbox
     * phpstorm
         * shell script plugin installed
+        * symfony support plugin
 * docker
 * postman
 

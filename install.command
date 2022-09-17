@@ -29,6 +29,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 killall Finder
 
 printf '\n\e[35m Create Work dir if it is not exist... \e[0m\n'
+# shellcheck disable=SC2164
 cd
 mkdir -p ~/Work
 
@@ -86,7 +87,13 @@ brew install \
   composer \
   node \
   yarn \
-  vim
+  vim \
+  php@8.1 \
+  mysql@8.0 \
+  symfony-cli/tap/symfony-cli
+
+printf '\n\e[35m Install xDebug... \e[0m\n'
+pecl install xdebug
 
 printf '\n\e[35m Install fonts... \e[0m\n'
 brew tap homebrew/cask-fonts
@@ -144,14 +151,14 @@ if [ ! -f "$FILE" ]; then
   echo 'alias ip="ipconfig getifaddr en0"' >>~/.zsh_aliases
   echo "" >>~/.zsh_aliases
   echo "# edit global zsh configuration" >>~/.zsh_aliases
-  echo 'alias zshconfig="vim ~/.zshrc"' >>~/.zsh_aliases
+  echo 'alias zconfig="vim ~/.zshrc"' >>~/.zsh_aliases
   echo "# edit global zsh_profile configuration" >>~/.zsh_aliases
-  echo "alias profile='vim ~/.zsh_profile'" >>~/.zsh_aliases
+  echo "alias zprofile='vim ~/.zsh_profile'" >>~/.zsh_aliases
   echo "# edit global zsh_aliases configuration" >>~/.zsh_aliases
   echo "alias zaliases='vim ~/.zsh_aliases'" >>~/.zsh_aliases
   echo "" >>~/.zsh_aliases
   echo "# reload zsh configuration" >>~/.zsh_aliases
-  echo 'alias zshsource="source ~/.zshrc"' >>~/.zsh_aliases
+  echo 'alias zsource="source ~/.zshrc"' >>~/.zsh_aliases
   echo "# reload zsh configuration" >>~/.zsh_aliases
   echo 'alias ohmyzsh="cd ~/.oh-my-zsh"' >>~/.zsh_aliases
   echo "" >>~/.zsh_aliases

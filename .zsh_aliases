@@ -2,14 +2,14 @@
 alias ip="ipconfig getifaddr en0"
 
 # edit global zsh configuration
-alias zshconfig="vim ~/.zshrc"
+alias zconfig="vim ~/.zshrc"
 # edit global zsh_profile configuration
-alias profile='vim ~/.zsh_profile'
+alias zprofile='vim ~/.zsh_profile'
 # edit global zsh_aliases configuration
 alias zalias='vim ~/.zsh_aliases'
 
 # reload zsh configuration
-alias zshsource="source ~/.zshrc"
+alias zsource="source ~/.zshrc"
 # reload zsh configuration
 alias ohmyzsh="cd ~/.oh-my-zsh"
 
