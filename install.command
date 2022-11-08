@@ -90,7 +90,10 @@ brew install \
   vim \
   php@8.1 \
   mysql@8.0 \
-  symfony-cli/tap/symfony-cli
+  symfony-cli/tap/symfony-cli \
+  libpq
+
+brew link --force libpq
 
 printf '\n\e[35m Install xDebug... \e[0m\n'
 pecl install xdebug
