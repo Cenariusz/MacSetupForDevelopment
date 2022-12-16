@@ -19,8 +19,16 @@ plugins=(
 # Add zsh-completions to FPATH
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
-# Load config
+# Load configs
 source $ZSH/oh-my-zsh.sh
+
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi
+
+if [ -f ~/.zsh_profile ]; then
+    source ~/.zsh_profile
+fi
 
 # Run/use Starship
 eval "$(starship init zsh)"
