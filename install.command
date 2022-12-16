@@ -79,6 +79,7 @@ brew install --cask \
 
 printf '\n\e[35m Install terminal applications... \e[0m\n'
 brew install \
+  coreutils \
   wget \
   exa \
   git \
@@ -112,7 +113,7 @@ fi
 printf '\n\e[35m Git global setup... \e[0m\n'
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global init.defaultBranch main
-git config --list
+#git config --list
 
 printf "\n\e[35m Append SSH config file with demo setup... \e[0m\n"
 printf '\n' >>$SSH_CONFIG_FILE
@@ -121,28 +122,45 @@ echo "#	Hostname github.com" >>$SSH_CONFIG_FILE
 echo "#	Identityfile ~/.ssh/id_rsa" >>$SSH_CONFIG_FILE
 echo "#	IdentitiesOnly yes" >>$SSH_CONFIG_FILE
 
-DIR="/Users/kenariosz/.oh-my-zsh"
+DIR="/Users/$USER/.oh-my-zsh"
 if [ ! -d "$DIR" ]; then
   printf '\n\e[35m Install Oh My ZSH... \e[0m\n'
-  # Oh My ZSH
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+
+  if [ -f ~/.zshrc ]; then
+    printf '\n\e[35m Backup .zshrc file... \e[0m\n'
+    cp ~/.zshrc ~/.zshrc.orig
+  fi
+
+  printf '\n\e[35m Create new .zshrc file from template... \e[0m\n'
+  wget https://raw.githubusercontent.com/Cenarius-io/MacSetupForDevelopment/master/.zshrc -O ~/.zshrc
 
   printf '\n\e[35m Update Oh My ZSH... \e[0m\n'
   omz update
 fi
 
-printf '\n\e[35m Install Oh My ZSH plugins... \e[0m\n'
-brew install zsh-completions
-brew install zsh-autosuggestions
-brew install zsh-syntax-highlighting
+if [ ! -d "${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions" ]; then
+  printf '\n\e[35m Install zsh-completions plugin... \e[0m\n'
+  git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+fi
+
+if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
+  printf '\n\e[35m Install zsh-autosuggestions plugin... \e[0m\n'
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+
+if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
+  printf '\n\e[35m Install zsh-syntax-highlighting plugin... \e[0m\n'
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+fi
 
 if ! command -v starship &>/dev/null; then
-
   printf '\n\e[35m Install Starship terminal theme... \e[0m\n'
   brew install starship
-
-  echo 'eval "$(starship init zsh)"' >>~/.zshrc
 fi
+
+printf '\n\e[35m Load new config... \e[0m\n'
+source ~/.zshrc
 
 FILE=~/.zsh_aliases
 if [ ! -f "$FILE" ]; then
@@ -177,6 +195,8 @@ if [ ! -f "$FILE" ]; then
   echo "alias ld='ls -d */'" >>~/.zsh_aliases
   echo "alias la='ls -CA'" >>~/.zsh_aliases
 fi
+
+source ~/.zsh_aliases
 
 if [ ! -f ~/.hushlogin ]; then
   # Remove login info
