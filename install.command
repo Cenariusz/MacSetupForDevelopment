@@ -62,45 +62,44 @@ brew install --cask \
   discord \
   slack \
   skype \
-  viber \
   zoom \
   microsoft-office \
   steam \
   1password \
-  google-chrome \
-  firefox \
+  arc \
   iterm2 \
   rectangle \
   ImageOptim \
-  sublime-text \
+  visual-studio-code \
   jetbrains-toolbox \
   docker \
   postman
 
 printf '\n\e[35m Install terminal applications... \e[0m\n'
+#@todo: Check/try out lsd
 brew install \
   coreutils \
   wget \
-  exa \
+  lsd \
   git \
-  git-flow-avh \
+  git-flow \
   gh \
   composer \
   node \
   yarn \
   vim \
-  php@8.1 \
-  mysql@8.0 \
+  php \
+  mysql \
   symfony-cli/tap/symfony-cli \
   libpq
 
+# https://github.com/Homebrew/brew/blob/master/docs/FAQ.md#can-i-install-my-own-stuff-to-usrlocal
 brew link --force libpq
 
 printf '\n\e[35m Install xDebug... \e[0m\n'
 pecl install xdebug
 
 printf '\n\e[35m Install fonts... \e[0m\n'
-brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 
 SSH_CONFIG_FILE=~/.ssh/config

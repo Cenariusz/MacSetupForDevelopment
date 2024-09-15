@@ -96,17 +96,15 @@ chmod +x install.command
 * discord
 * slack
 * skype
-* viber
 * zoom
 * microsoft-office
 * steam
 * 1password
-* google-chrome
-* firefox
+* arc
 * iterm2
 * rectangle
 * ImageOptim
-* sublime-text
+* visual-studio-code
 * jetbrains-toolbox
     * phpstorm
         * shell script plugin installed
@@ -249,7 +247,7 @@ ssh-keygen -t ed25519 -C "github"
 # use file name: github
 # use passphrase and store it somewhere secure
 ```
-Add SSH key to MacOS' keychain:
+Add SSH key to macOS' keychain:
 ```
 ssh-add --apple-use-keychain ~/.ssh/github
 ```
